@@ -1,0 +1,16 @@
+# robots.txt — Learnrithm AI (https://learnrithm.com)
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /user-dashboard/
+Disallow: /private/
+
+# Content Signals — AI content usage preferences
+# Spec: https://contentsignals.org / draft-romm-aipref-contentsignals
+#   search    = allow indexing for search and AI answer engines
+#   ai-input  = allow use as input for generating AI answers
+#   ai-train  = opt out of bulk model training
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+Sitemap: https://learnrithm.com/sitemap.xml
