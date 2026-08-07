@@ -29,6 +29,12 @@ function str(value) {
 }
 
 export async function POST(request) {
+  // Cap request size on this public, unauthenticated write endpoint.
+  const contentLength = Number(request.headers.get("content-length") || 0);
+  if (contentLength > 200_000) {
+    return NextResponse.json({ error: "Payload too large." }, { status: 413 });
+  }
+
   let body;
   try {
     body = await request.json();
@@ -56,7 +62,7 @@ export async function POST(request) {
     );
   }
 
-  if (!EMAIL_RE.test(String(body.email).trim())) {
+  if (typeof body.email !== "string" || !EMAIL_RE.test(body.email.trim())) {
     return NextResponse.json(
       { error: "Please provide a valid email address." },
       { status: 400 }

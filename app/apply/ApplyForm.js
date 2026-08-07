@@ -141,6 +141,7 @@ export default function ApplyForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (status === "submitting") return;
     setStatus("submitting");
     setErrorMsg("");
 
