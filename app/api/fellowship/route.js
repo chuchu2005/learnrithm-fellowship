@@ -124,6 +124,9 @@ export async function POST(request) {
     await sendApplicationReceivedEmail({
       to: email,
       fullName: str(fd.get("fullName")),
+      university: str(fd.get("university")),
+      country: str(fd.get("country")),
+      continent: str(fd.get("continent")),
     }).catch((err) => console.error("[fellowship] confirmation email failed:", err));
 
     return NextResponse.json({ ok: true, id: fellowship.id }, { status: 201 });
