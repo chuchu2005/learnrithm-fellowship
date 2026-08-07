@@ -132,20 +132,74 @@ const selectClass =
   "form-select form-select-lg bg-light border-0 rounded-4";
 
 export default function ApplyForm() {
-  const [submitted, setSubmitted] = useState(false);
+  // Submit state machine: idle -> submitting -> (submitted | error)
+  const [status, setStatus] = useState("idle");
+  const [errorMsg, setErrorMsg] = useState("");
   const [continent, setContinent] = useState("");
   const [country, setCountry] = useState("");
   const group = COUNTRY_GROUPS.find((g) => g.continent === continent);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    setStatus("submitting");
+    setErrorMsg("");
+
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      fullName: fd.get("fullName"),
+      email: fd.get("email"),
+      phone: fd.get("phone"),
+      linkedin: fd.get("linkedin"),
+      continent: fd.get("continent"),
+      country: fd.get("country"),
+      situation: fd.get("situation"),
+      gradMonth: fd.get("gradMonth"),
+      gradYear: fd.get("gradYear"),
+      university: fd.get("university"),
+      major: fd.get("major"),
+      // Checkboxes: use getAll() — get() would only return the first checked value.
+      languages: fd.getAll("languages"),
+      projects: fd.get("projects"),
+      apis: fd.get("apis"),
+      aiml: fd.get("aiml"),
+      why: fd.get("why"),
+      aiInterests: fd.getAll("aiInterests"),
+      career: fd.get("career"),
+      learn: fd.get("learn"),
+      fulltime: fd.get("fulltime"),
+      timezone: fd.get("timezone"),
+      conflicts: fd.get("conflicts"),
+      proud: fd.get("proud"),
+      stuck: fd.get("stuck"),
+      collab: fd.get("collab"),
+      anythingElse: fd.get("else"), // form field "else" -> stored as anythingElse
+    };
+
+    try {
+      const res = await fetch("/api/fellowship", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.status === 201) {
+        setStatus("submitted");
+        if (typeof window !== "undefined") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+        return;
+      }
+
+      const data = await res.json().catch(() => ({}));
+      setErrorMsg(data.error || "Something went wrong. Please try again.");
+      setStatus("error");
+    } catch {
+      setErrorMsg("Network error. Please check your connection and try again.");
+      setStatus("error");
     }
   }
 
-  if (submitted) {
+  if (status === "submitted") {
     return (
       <>
         <section className="apply-hero bg-light position-relative overflow-hidden">
@@ -219,7 +273,16 @@ export default function ApplyForm() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-9 col-xl-8">
-              <form onSubmit={handleSubmit} noValidate>
+              <form onSubmit={handleSubmit}>
+                {status === "error" && (
+                  <div
+                    className="alert alert-danger d-flex align-items-center gap-2 mb-4"
+                    role="alert"
+                  >
+                    <span aria-hidden="true">⚠️</span>
+                    <span>{errorMsg}</span>
+                  </div>
+                )}
                 {/* 01 — Basic Info */}
                 <Section n={1} title="Basic Info" hint="Tell us who you are and how to reach you.">
                   <div className="row g-3">
@@ -424,8 +487,12 @@ export default function ApplyForm() {
 
                 {/* Submit */}
                 <div className="bg-white rounded-5 shadow-sm p-4 p-md-5 text-center">
-                  <button type="submit" className="btn btn-primary btn-lg has-icon px-4 px-md-5">
-                    Submit Application
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-lg has-icon px-4 px-md-5"
+                    disabled={status === "submitting"}
+                  >
+                    {status === "submitting" ? "Submitting…" : "Submit Application"}
                     <div className="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M15 7a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2z"></path>
