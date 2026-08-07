@@ -72,7 +72,7 @@ datasource db {
 }
 
 model Fellowship {
-  id           String   @id @db.ObjectId
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
   status       String   @default("submitted")
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
@@ -132,9 +132,13 @@ Notes:
 1. User fills the uncontrolled form and clicks **Submit application**.
 2. `handleSubmit` (still client-side) builds a JSON payload from `FormData`:
    - scalar fields → strings (trimmed server-side),
-   - `languages` and `aiInterests` checkboxes → arrays,
+   - `languages` and `aiInterests` checkboxes → arrays via
+     `formData.getAll("languages")` / `formData.getAll("aiInterests")` (the form is
+     uncontrolled, so `get()` would only return the first value),
    - the `else` field → serialized as `anythingElse`.
-3. `fetch("/api/fellowship", { method: "POST", body: JSON })`.
+3. `fetch("/api/fellowship", { method: "POST", body: JSON })`. The submit button is
+   disabled and shows a pending state while the request is in-flight to prevent
+   double-submits.
 4. Route handler validates, inserts via `prisma.fellowship.create()`.
 5. On **201**: client shows the existing success screen + scrolls to top (unchanged UX).
 6. On **4xx/5xx**: client shows an inline error banner above the form, preserves entered
@@ -142,16 +146,20 @@ Notes:
 
 ## 7. Validation
 
-Server-side, minimal but real:
+Server-side, minimal but real (this is the authoritative gate):
 - Required fields present and non-empty after trim: `fullName`, `email`, `phone`,
   `linkedin`, `continent`, `country`, `situation`, `university`, `major`, `why`,
   `fulltime`, `timezone`.
 - `email` matches a simple email regex.
-- Optional fields stored as-is (or `null`/empty).
+- Optional fields: empty optionals stored as `null` (not `""`) for consistency.
 - Any failure → **400** with a human-readable message.
 
-The form's existing native `required` attributes remain as the first line of defense;
-server validation is the authoritative check.
+**Client-side note:** the current form opens with `<form ... noValidate>`, which
+**disables** the browser's native HTML5 validation — so the existing `required` /
+`type="email"` attributes do nothing today and the server is currently the *only* gate.
+The plan should **remove `noValidate`** so the browser validates required fields and
+email format instantly (native popups) as a true first line of defense, with server
+validation remaining authoritative. Either way, never rely solely on the client.
 
 ## 8. Error handling
 
