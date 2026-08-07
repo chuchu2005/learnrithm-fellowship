@@ -1,0 +1,28 @@
+// TEMP diagnostic — isolate the ZeptoMail 500. Delete after.
+const raw = process.env.ZEPTOMAIL_TOKEN;
+const token = (raw || "").trim();
+console.log("TOKEN length:", token.length, "| head:", token.slice(0, 4), "| tail:", token.slice(-4), "| has-internal-ws:", /\s/.test(token));
+
+const fromAddress = process.env.ZEPTOMAIL_FROM_ADDRESS || "fellowship@learnrithm.com";
+const to = "peter@learnrithm.com";
+const body = {
+  from: { address: fromAddress, name: "Learnrithm Fellowship" },
+  to: [{ email_address: { address: to } }],
+  subject: "ZeptoMail diagnostic",
+  htmlbody: "<p>diagnostic</p>",
+  textbody: "diagnostic",
+};
+const url = "https://api.zeptomail.com/v1.1/email";
+
+async function trySend(label, headers) {
+  const res = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
+  const text = await res.text();
+  console.log("\n== " + label + " ==");
+  console.log("status:", res.status, res.statusText);
+  console.log("server:", res.headers.get("server"), "| ct:", res.headers.get("content-type"));
+  console.log("body:", (text || "(empty)").replace(/\s+/g, " ").slice(0, 400));
+}
+
+await trySend("NO AUTH (control)", { "Content-Type": "application/json", Accept: "application/json" });
+await trySend("scheme: Zoho-enczapikey", { Authorization: "Zoho-enczapikey " + token, "Content-Type": "application/json", Accept: "application/json" });
+await trySend("scheme: Zoho-encz-API", { Authorization: "Zoho-encz-API " + token, "Content-Type": "application/json", Accept: "application/json" });

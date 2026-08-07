@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { uploadPhoto, PhotoValidationError } from "@/lib/r2";
+import { sendApplicationReceivedEmail } from "@/lib/email";
 
 // Fields the form marks required. The form uses <form ...> (noValidate removed),
 // so the browser validates these first; the server remains authoritative.
@@ -118,6 +119,13 @@ export async function POST(request) {
         photoKey: key,
       },
     });
+    // Best-effort confirmation email. The application is already saved, so a
+    // ZeptoMail failure must NEVER fail this request — swallow + log only.
+    await sendApplicationReceivedEmail({
+      to: email,
+      fullName: str(fd.get("fullName")),
+    }).catch((err) => console.error("[fellowship] confirmation email failed:", err));
+
     return NextResponse.json({ ok: true, id: fellowship.id }, { status: 201 });
   } catch (err) {
     if (err instanceof PhotoValidationError) {
