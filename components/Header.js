@@ -39,20 +39,20 @@ export default function Header() {
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="/careers">
-                                        Careers
+                                    <Link className="nav-link" href="#">
+                                        How It Works
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="https://ambassadors.learnrithm.com/apply" target="_blank" rel="noopener noreferrer">
-                                        Become An Ambassador
+                                    <a className="nav-link" href="#home-faq-accordion">
+                                        FAQ
                                     </a>
                                 </li>
                             </ul>
                             <div className="d-flex align-items-center gap-3">
                                 <LanguageSwitcher menuAlign="right" />
-                                <Link href="https://app.learnrithm.com" className="btn btn-sm btn-dark has-icon">
-                                    Get Started
+                                <Link href="/apply" className="btn btn-sm btn-dark has-icon">
+                                    Apply Now
 
                                     <div className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">

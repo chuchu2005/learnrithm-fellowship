@@ -18,22 +18,22 @@ export default function FeatureFour() {
                                     <path d="M19.527 4.826c-2.04-.11-4.196-2.23-4.352-4.273.073-.03.151-.068.233-.091a11.5 11.5 0 0 1 3.74-.45q.099.001.195.01c.415.055.611.236.636.654.025.454.036.911.013 1.366a11.4 11.4 0 0 1-.465 2.783zM6.954 12.18c.653-.003.873.206.872.725a2.17 2.17 0 0 1-.636 1.55c-1.1 1.13-2.274 2.177-3.647 2.977a4 4 0 0 1-.24.13c-.336.167-.589.152-.793-.047-.207-.2-.25-.467-.062-.787.304-.514.598-1.043.971-1.505a45 45 0 0 1 2.002-2.29 2.32 2.32 0 0 1 1.533-.753m-4.047-1.954c-.605-.11-1.193.004-1.78.128-.152.032-.303.08-.457.1a.56.56 0 0 1-.59-.295c-.123-.213-.1-.423.039-.623a.6.6 0 0 1 .074-.091c.668-.659 1.317-1.337 2.009-1.969a4.2 4.2 0 0 1 2.113-1.03c.334-.06.671-.083 1.012.073-.804 1.232-1.604 2.455-2.42 3.707m6.939 6.861c-.017.013.022-.021.065-.049 1.184-.748 2.369-1.494 3.581-2.258.117.262.114.551.07.844a4.34 4.34 0 0 1-1.127 2.356c-.575.619-1.186 1.204-1.785 1.802a.9.9 0 0 1-.22.158.57.57 0 0 1-.818-.44c-.014-.115-.001-.233.01-.35.071-.67.144-1.34.223-2.064zM8.065 15.27l.912.946c-.32.174-.656.359-.994.54q-.29.154-.588.3c-.463.227-.621.194-1.006-.222zm-4.226-4.24.9.912c-.25.261-.518.536-.779.818-.263.284-.518.574-.778.86-.343-.319-.4-.509-.223-.87.279-.57.577-1.13.88-1.72m9.031-5.652a1.733 1.733 0 0 1 1.756 1.748c0 .973-.793 1.766-1.759 1.759a1.783 1.783 0 0 1-1.749-1.742c-.017-.959.78-1.761 1.752-1.765" />
                                 </svg>
 
-                                Study Smarts
+                                Why This Program
                             </div>
 
                             {/* <!-- Spacer --> */}
                             <div className="mb-6"></div>
 
                             <h2 className="ss-text-reveal-blur mb-0">
-                                Everything You Need to Study Smart and Score Big!
+                                Everything You Need to Go From New to Job-Ready
                             </h2>
 
                             {/* <!-- Spacer --> */}
                             <div className="mb-6"></div>
 
                             <p className="fs-md mb-0">
-                                Our AI helper makes learning feel like a game - fun, fast, and it
-                                actually works! Watch your grades go up and up.
+                                In 12 weeks you go from learning the basics to building real AI apps.
+                                You learn directly from software engineers at Google, OpenAI, Grok, and other big tech companies.
                             </p>
                         </div>
                     </div>
@@ -45,15 +45,15 @@ export default function FeatureFour() {
                                         <div className="p-4 p-xl-10 vstack justify-content-between gap-5 h-full" data-ss-reveal-group="" data-y="50">
                                             <div className="">
                                                 <h5 className="mb-0">
-                                                    Your Own AI Study Buddy.
+                                                    Live Classes on Zoom.
                                                 </h5>
 
                                                 {/* <!-- Spacer --> */}
                                                 <div className="mb-4 mb-lg-5"></div>
 
                                                 <p className="fs-md mb-0">
-                                                    Get personalized help 24/7 with your AI study buddy
-                                                    that understands exactly what you need to learn.
+                                                    Join live online classes with real engineers. Ask questions
+                                                    and get answers right away - no waiting on a forum.
                                                 </p>
 
                                                 {/* <!-- Spacer --> */}
@@ -66,7 +66,7 @@ export default function FeatureFour() {
                                                             <path d="M12.498 7.583c0-.992-.201-1.557-.53-1.887-.33-.328-.894-.53-1.886-.53h-2.5c-.993 0-1.558.201-1.887.53-.329.33-.53.895-.53 1.887v2.5c0 .992.201 1.557.53 1.886.33.329.894.53 1.887.53h2.5c.992 0 1.556-.201 1.885-.53.33-.33.53-.894.53-1.886zm1 2.5c0 1.091-.215 1.985-.823 2.593-.609.608-1.502.823-2.593.823h-2.5c-1.091 0-1.986-.215-2.594-.823s-.823-1.502-.823-2.593v-2.5c0-1.09.215-1.985.823-2.594s1.503-.823 2.594-.823h2.5c1.09 0 1.984.215 2.593.823.608.609.823 1.503.823 2.594zM5.007 2.167V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m3.325 0V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m3.333 0V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0M17.167 5a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm-5.502 5.501V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m-3.323 0V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m-3.335 0V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0M2.167 5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1z" />
                                                         </svg>
 
-                                                        Personalized
+                                                        Real Engineers
                                                     </div>
                                                     <div className="bg-white border rounded-2 d-inline-flex align-items-center gap-2 px-4 py-2 lh-sm text-center fw-semibold text-dark">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 19">
@@ -76,7 +76,7 @@ export default function FeatureFour() {
                                                             <path d="M12.839 15.834a.6.6 0 1 1 0 1.2H9.506a.6.6 0 1 1 0-1.2zm-6.667 0a.6.6 0 1 1 0 1.2H2.84a.6.6 0 1 1 0-1.2z" />
                                                         </svg>
 
-                                                        24/7 Available
+                                                        Ask Anything
                                                     </div>
                                                     <div className="bg-white border rounded-2 d-inline-flex align-items-center gap-2 px-4 py-2 lh-sm text-center fw-semibold text-dark">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 18 18">
@@ -85,13 +85,13 @@ export default function FeatureFour() {
                                                             <path d="M7.5 13.1V4.765c0-.926.232-1.73.8-2.299.57-.568 1.374-.8 2.3-.8h3.333a.6.6 0 1 1 0 1.199H10.6c-.741 0-1.187.185-1.452.45-.264.264-.449.71-.449 1.45V13.1c0 .741.185 1.187.45 1.451.264.265.71.45 1.45.45h3.334a.6.6 0 0 1 0 1.2H10.6c-.926 0-1.73-.232-2.3-.8-.568-.57-.8-1.375-.8-2.3" />
                                                         </svg>
 
-                                                        Instant Help
+                                                        Fast Answers
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="">
-                                                <Link href="https://app.learnrithm.com" className="btn btn-primary has-icon">
-                                                    Get Your AI Tutor
+                                                <Link href="/apply" className="btn btn-primary has-icon">
+                                                    Apply Now
                                                     <div className="icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                                                             <path d="M15 7a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2z">
@@ -106,7 +106,7 @@ export default function FeatureFour() {
                                     </div>
                                     <div className="col-md-6" data-ss-reveal="" data-x="-50">
                                         <div className="img-clip-anim-box ratio ratio-1x1 rounded-5 overflow-hidden h-full">
-                                            <Image src="/img/content/features/5.webp" width={445} height={445}  alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
+                                            <Image src="/img/placeholders/tile.png" width={445} height={445}  alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
                                         </div>
                                     </div>
                                 </div>
@@ -117,15 +117,15 @@ export default function FeatureFour() {
                                         <div className="p-4 p-xl-10 vstack justify-content-between gap-5 h-full" data-ss-reveal-group="" data-y="50">
                                             <div className="">
                                                 <h5 className="mb-0">
-                                                    Smart Study Plan Maker.
+                                                    Build Real Projects.
                                                 </h5>
 
                                                 {/* <!-- Spacer --> */}
                                                 <div className="mb-4 mb-lg-5"></div>
 
                                                 <p className="fs-md mb-0">
-                                                    Create personalized study schedules that adapt to your
-                                                    learning pace and help you crush your academic goals.
+                                                    You learn by doing. Every week you build real things -
+                                                    chatbots, AI tools, and apps - not just watch videos.
                                                 </p>
 
                                                 {/* <!-- Spacer --> */}
@@ -138,7 +138,7 @@ export default function FeatureFour() {
                                                             <path d="M12.498 7.583c0-.992-.201-1.557-.53-1.887-.33-.328-.894-.53-1.886-.53h-2.5c-.993 0-1.558.201-1.887.53-.329.33-.53.895-.53 1.887v2.5c0 .992.201 1.557.53 1.886.33.329.894.53 1.887.53h2.5c.992 0 1.556-.201 1.885-.53.33-.33.53-.894.53-1.886zm1 2.5c0 1.091-.215 1.985-.823 2.593-.609.608-1.502.823-2.593.823h-2.5c-1.091 0-1.986-.215-2.594-.823s-.823-1.502-.823-2.593v-2.5c0-1.09.215-1.985.823-2.594s1.503-.823 2.594-.823h2.5c1.09 0 1.984.215 2.593.823.608.609.823 1.503.823 2.594zM5.007 2.167V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m3.325 0V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m3.333 0V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0M17.167 5a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm-5.502 5.501V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m-3.323 0V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m-3.335 0V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0M2.167 5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1z" />
                                                         </svg>
 
-                                                        Adaptive Plans
+                                                        Hands-On
                                                     </div>
                                                     <div className="bg-white border rounded-2 d-inline-flex align-items-center gap-2 px-4 py-2 lh-sm text-center fw-semibold text-dark">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 19">
@@ -148,7 +148,7 @@ export default function FeatureFour() {
                                                             <path d="M12.839 15.834a.6.6 0 1 1 0 1.2H9.506a.6.6 0 1 1 0-1.2zm-6.667 0a.6.6 0 1 1 0 1.2H2.84a.6.6 0 1 1 0-1.2z" />
                                                         </svg>
 
-                                                        Track Progress
+                                                        Weekly Builds
                                                     </div>
                                                     <div className="bg-white border rounded-2 d-inline-flex align-items-center gap-2 px-4 py-2 lh-sm text-center fw-semibold text-dark">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 18 18">
@@ -157,13 +157,13 @@ export default function FeatureFour() {
                                                             <path d="M7.5 13.1V4.765c0-.926.232-1.73.8-2.299.57-.568 1.374-.8 2.3-.8h3.333a.6.6 0 1 1 0 1.199H10.6c-.741 0-1.187.185-1.452.45-.264.264-.449.71-.449 1.45V13.1c0 .741.185 1.187.45 1.451.264.265.71.45 1.45.45h3.334a.6.6 0 0 1 0 1.2H10.6c-.926 0-1.73-.232-2.3-.8-.568-.57-.8-1.375-.8-2.3" />
                                                         </svg>
 
-                                                        Goal Oriented
+                                                        Real Results
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="">
-                                                <Link href="https://app.learnrithm.com" className="btn btn-primary has-icon">
-                                                    Create Your Study Plan
+                                                <Link href="#what-youll-build" className="btn btn-primary has-icon">
+                                                    See Projects
 
                                                     <div className="icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -179,7 +179,7 @@ export default function FeatureFour() {
                                     </div>
                                     <div className="col-md-6" data-ss-reveal="" data-x="-50">
                                         <div className="img-clip-anim-box ratio ratio-1x1 rounded-5 overflow-hidden h-full">
-                                            <Image src="/img/content/features/6.webp" width={445} height={445} alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
+                                            <Image src="/img/placeholders/tile.png" width={445} height={445} alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
                                         </div>
                                     </div>
                                 </div>
@@ -190,15 +190,15 @@ export default function FeatureFour() {
                                         <div className="p-4 p-xl-10 vstack justify-content-between gap-5 h-full" data-ss-reveal-group="" data-y="50">
                                             <div className="">
                                                 <h5 className="mb-0">
-                                                    Practice Makes Perfect Mode.
+                                                    Learn From Real Engineers.
                                                 </h5>
 
                                                 {/* <!-- Spacer --> */}
                                                 <div className="mb-4 mb-lg-5"></div>
 
                                                 <p className="fs-md mb-0">
-                                                    Practice with unlimited quizzes and tests that
-                                                    feel like real exams so you're fully prepared on test day.
+                                                    Learn directly from software engineers at Google, OpenAI, Grok, and other big tech.
+                                                    They also teach you to use sub-agents so you build apps way faster.
                                                 </p>
 
                                                 {/* <!-- Spacer --> */}
@@ -211,7 +211,7 @@ export default function FeatureFour() {
                                                             <path d="M12.498 7.583c0-.992-.201-1.557-.53-1.887-.33-.328-.894-.53-1.886-.53h-2.5c-.993 0-1.558.201-1.887.53-.329.33-.53.895-.53 1.887v2.5c0 .992.201 1.557.53 1.886.33.329.894.53 1.887.53h2.5c.992 0 1.556-.201 1.885-.53.33-.33.53-.894.53-1.886zm1 2.5c0 1.091-.215 1.985-.823 2.593-.609.608-1.502.823-2.593.823h-2.5c-1.091 0-1.986-.215-2.594-.823s-.823-1.502-.823-2.593v-2.5c0-1.09.215-1.985.823-2.594s1.503-.823 2.594-.823h2.5c1.09 0 1.984.215 2.593.823.608.609.823 1.503.823 2.594zM5.007 2.167V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m3.325 0V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m3.333 0V.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0M17.167 5a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H15.5a.5.5 0 0 1 0-1zm-5.502 5.501V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m-3.323 0V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0m-3.335 0V15.5a.5.5 0 0 1 1 0v1.667a.5.5 0 0 1-1 0M2.167 5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1zm0 3.333a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1z" />
                                                         </svg>
 
-                                                        Unlimited Practice
+                                                        Google Engineers
                                                     </div>
                                                     <div className="bg-white border rounded-2 d-inline-flex align-items-center gap-2 px-4 py-2 lh-sm text-center fw-semibold text-dark">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 19">
@@ -221,7 +221,7 @@ export default function FeatureFour() {
                                                             <path d="M12.839 15.834a.6.6 0 1 1 0 1.2H9.506a.6.6 0 1 1 0-1.2zm-6.667 0a.6.6 0 1 1 0 1.2H2.84a.6.6 0 1 1 0-1.2z" />
                                                         </svg>
 
-                                                        Real Tests
+                                                        OpenAI Engineers
                                                     </div>
                                                     <div className="bg-white border rounded-2 d-inline-flex align-items-center gap-2 px-4 py-2 lh-sm text-center fw-semibold text-dark">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 18 18">
@@ -230,13 +230,13 @@ export default function FeatureFour() {
                                                             <path d="M7.5 13.1V4.765c0-.926.232-1.73.8-2.299.57-.568 1.374-.8 2.3-.8h3.333a.6.6 0 1 1 0 1.199H10.6c-.741 0-1.187.185-1.452.45-.264.264-.449.71-.449 1.45V13.1c0 .741.185 1.187.45 1.451.264.265.71.45 1.45.45h3.334a.6.6 0 0 1 0 1.2H10.6c-.926 0-1.73-.232-2.3-.8-.568-.57-.8-1.375-.8-2.3" />
                                                         </svg>
 
-                                                        Exam Ready
+                                                        Grok Engineers
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="">
-                                                <Link href="https://app.learnrithm.com" className="btn btn-primary has-icon">
-                                                    Practice for Your Exam
+                                                <Link href="#skills" className="btn btn-primary has-icon">
+                                                    Meet Your Engineers
 
                                                     <div className="icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -252,7 +252,7 @@ export default function FeatureFour() {
                                     </div>
                                     <div className="col-md-6" data-ss-reveal="" data-x="-50">
                                         <div className="img-clip-anim-box ratio ratio-1x1 rounded-5 overflow-hidden h-full">
-                                            <Image src="/img/content/features/7.webp" width={445} height={445}  alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
+                                            <Image src="/img/placeholders/tile.png" width={445} height={445}  alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
                                         </div>
                                     </div>
                                 </div>

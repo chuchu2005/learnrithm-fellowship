@@ -1,7 +1,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { COMPARE_PAGES } from "@/lib/compareData";
 
 
 export default function Footer() {
@@ -22,14 +21,14 @@ export default function Footer() {
                                 <div className="mb-6"></div>
 
                                 <p className="fs-md mb-0 text-white text-opacity-75">
-                                    Learnrithm - Transforming education through AI-powered learning solutions.
+                                    The Learnrithm AI Fellowship - a free 12-week program that teaches you to build real AI apps, from beginner to job-ready.
                                 </p>
                             </div>
                             <div className="col-xl-9">
                                 <div className="row g-10" data-ss-reveal-group="" data-y="50" data-delay="0.3">
                                     <div className="col-md-6 col-lg">
                                         <div className="footer-item">
-                                            <h6 className="text-white mb-6">Company</h6>
+                                            <h6 className="text-white mb-6">Explore</h6>
 
                                             <ul className="list-unstyled d-grid gap-4 fs-md mb-0">
                                                 <li>
@@ -38,38 +37,18 @@ export default function Footer() {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/contact" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
-                                                        Contact
+                                                    <Link href="https://learnrithm.com/about-us" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                        About
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/careers" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
-                                                        Careers
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/team" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
-                                                        Team
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/about-us" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
-                                                        About Us
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/features" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
-                                                        Features
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/faq" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                    <Link href="#home-faq-accordion" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                         FAQ
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/pricing" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
-                                                        Pricing
+                                                    <Link href="/apply" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                        Apply
                                                     </Link>
                                                 </li>
                                             </ul>
@@ -77,7 +56,7 @@ export default function Footer() {
                                     </div>
                                     <div className="col-md-6 col-lg">
                                         <div className="footer-item">
-                                            <h6 className="text-white mb-6">Programs</h6>
+                                            <h6 className="text-white mb-6">More</h6>
 
                                             <ul className="list-unstyled d-grid gap-4 fs-md mb-0">
                                                 <li>
@@ -99,32 +78,32 @@ export default function Footer() {
 
                                             <ul className="list-unstyled d-grid gap-4 fs-md mb-0">
                                                 <li>
-                                                    <Link href="/privacypolicy" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                    <Link href="https://learnrithm.com/privacypolicy" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                         Privacy Policy
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/termsofservice" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                    <Link href="https://learnrithm.com/termsofservice" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                         Terms of Service
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/ai-policies" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                    <Link href="https://learnrithm.com/ai-policies" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                         AI Policies
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/refundpolicy" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                    <Link href="https://learnrithm.com/refundpolicy" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                         Refund Policy
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/cookiepolicy" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                    <Link href="https://learnrithm.com/cookiepolicy" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                         Cookie Policy
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/requestdeletion" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                                    <Link href="https://learnrithm.com/requestdeletion" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                         Request Deletion
                                                     </Link>
                                                 </li>
@@ -180,21 +159,7 @@ export default function Footer() {
                                         </div>
                                     </div>
 
-                                    <div className="col-md-6 col-lg">
-                                        <div className="footer-item">
-                                            <h6 className="text-white mb-6">Compare</h6>
 
-                                            <ul className="list-unstyled d-grid gap-4 fs-md mb-0">
-                                                {Object.entries(COMPARE_PAGES).map(([slug, p]) => (
-                                                    <li key={slug}>
-                                                        <Link href={`/compare/${slug}`} className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
-                                                            Learnrithm vs {p.name}
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -206,20 +171,20 @@ export default function Footer() {
                             <div className="row align-items-center justify-content-between g-3">
                                 <div className="col-12 col-md-auto text-center text-md-start">
                                     <p className="fs-md mb-0 text-white text-opacity-75">
-                                        © {currentYear} Learnrithm | All Rights Reserved
+                                        © {currentYear} Learnrithm AI Fellowship | All Rights Reserved
                                     </p>
                                 </div>
 
                                 <div className="col-12 col-md-auto text-center text-md-start">
                                     <ul className="list-unstyled hstack justify-content-center gap-2 fs-md mb-0">
                                         <li>
-                                            <Link href="/privacypolicy" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                            <Link href="https://learnrithm.com/privacypolicy" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                 Privacy Policy
                                             </Link>
                                         </li>
                                         <li>|</li>
                                         <li>
-                                            <Link href="/termsofservice" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
+                                            <Link href="https://learnrithm.com/termsofservice" className="animated-link text-decoration-none text-white text-opacity-75 text-white-hover transition-base">
                                                 Terms of Service
                                             </Link>
                                         </li>

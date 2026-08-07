@@ -7,7 +7,7 @@ export default function BrandSlider() {
     return (
             <section className="pt-15 pt-md-20 position-relative">
                     <div className="container text-center">
-                        <h6 className="mb-0">Learnrithm AI is trusted by students from over 100+ leading universities worldwide, including Ivy League and Russell Group institutions, helping more than 10,000 students achieve academic excellence and Learn New Things</h6>
+                        <h6 className="mb-0">Our fellows come from top universities all over the world. You do not need any coding experience to join - you just need to want to learn and build AI apps.</h6>
                     </div>
 
                     {/* <!-- Spacer --> */}

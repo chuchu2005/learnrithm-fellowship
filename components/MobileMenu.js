@@ -113,8 +113,8 @@ export default function MobileMenu() {
 
                 {/* ── CTA ── */}
                 <div className="d-grid gap-5 mt-3">
-                    <Link href="https://app.learnrithm.com" className="btn btn-primary has-icon">
-                        Get Started
+                    <Link href="/apply" className="btn btn-primary has-icon">
+                        Apply Now
                         <div className="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                                 <path d="M15 7a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2z"></path>

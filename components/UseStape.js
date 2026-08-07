@@ -7,8 +7,8 @@ import Image from "next/image";
 const tabs = [
     {
         id: "ai-avatar-1",
-        title: "Sign up and start for free!",
-        description: "Just put in your name and email - you're ready to learn in less than a minute!",
+        title: "Apply in Minutes",
+        description: "Fill out a short free form with your name and email. It takes less than five minutes.",
         image: { src: "/img/content/features/feature-step-1.webp", width: 625, height: 404 },
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 22 22">
@@ -18,8 +18,8 @@ const tabs = [
     },
     {
         id: "ai-avatar-2",
-        title: "Pick what you want to learn.",
-        description: "Choose your subject - math, science, history, or anything else you're studying!",
+        title: "Join Your Cohort",
+        description: "Get placed in a group of 25 to 30 learners. Classes are live on Zoom at set times each week.",
         image: { src: "/img/content/features/feature-step-2.webp", width: 625, height: 404 },
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 22 22">
@@ -31,8 +31,8 @@ const tabs = [
     },
     {
         id: "ai-avatar-3",
-        title: "Start learning and get smarter!",
-        description: "Watch your grades go up as Learnrithm helps you study - easy and fun!",
+        title: "Build and Ship Real Apps",
+        description: "Build real AI apps each week, get help from real engineers, and put your work online for real people to use.",
         image: { src: "/img/content/features/feature-step-3.webp", width: 625, height: 404 },
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 22 22">
@@ -51,7 +51,7 @@ export default function UseStape() {
 
 
     return (
-        <section className="py-15 py-md-20 py-lg-30 position-relative">
+        <section id="how-to-join" style={{ scrollMarginTop: "6rem" }} className="py-15 py-md-20 py-lg-30 position-relative">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-xxl-6 mx-auto text-center" data-ss-reveal-group="" data-y="50">
@@ -61,14 +61,14 @@ export default function UseStape() {
                                 <path d="M19.527 4.826c-2.04-.11-4.196-2.23-4.352-4.273.073-.03.151-.068.233-.091a11.5 11.5 0 0 1 3.74-.45q.099.001.195.01c.415.055.611.236.636.654.025.454.036.911.013 1.366a11.4 11.4 0 0 1-.465 2.783zM6.954 12.18c.653-.003.873.206.872.725a2.17 2.17 0 0 1-.636 1.55c-1.1 1.13-2.274 2.177-3.647 2.977a4 4 0 0 1-.24.13c-.336.167-.589.152-.793-.047-.207-.2-.25-.467-.062-.787.304-.514.598-1.043.971-1.505a45 45 0 0 1 2.002-2.29 2.32 2.32 0 0 1 1.533-.753m-4.047-1.954c-.605-.11-1.193.004-1.78.128-.152.032-.303.08-.457.1a.56.56 0 0 1-.59-.295c-.123-.213-.1-.423.039-.623a.6.6 0 0 1 .074-.091c.668-.659 1.317-1.337 2.009-1.969a4.2 4.2 0 0 1 2.113-1.03c.334-.06.671-.083 1.012.073-.804 1.232-1.604 2.455-2.42 3.707m6.939 6.861c-.017.013.022-.021.065-.049 1.184-.748 2.369-1.494 3.581-2.258.117.262.114.551.07.844a4.34 4.34 0 0 1-1.127 2.356c-.575.619-1.186 1.204-1.785 1.802a.9.9 0 0 1-.22.158.57.57 0 0 1-.818-.44c-.014-.115-.001-.233.01-.35.071-.67.144-1.34.223-2.064zM8.065 15.27l.912.946c-.32.174-.656.359-.994.54q-.29.154-.588.3c-.463.227-.621.194-1.006-.222zm-4.226-4.24.9.912c-.25.261-.518.536-.779.818-.263.284-.518.574-.778.86-.343-.319-.4-.509-.223-.87.279-.57.577-1.13.88-1.72m9.031-5.652a1.733 1.733 0 0 1 1.756 1.748c0 .973-.793 1.766-1.759 1.759a1.783 1.783 0 0 1-1.749-1.742c-.017-.959.78-1.761 1.752-1.765" />
                             </svg>
 
-                            Easy Steps
+                            How to Join
                         </div>
 
                         {/* <!-- Spacer --> */}
                         <div className="mb-6"></div>
                         <h3 className="ss-text-reveal-blur">
                             Three Simple Steps to
-                            <span className="text-primary">Start Learning!</span>
+                            <span className="text-primary">Join the Fellowship</span>
                         </h3>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ export default function UseStape() {
                                     role="tabpanel"
                                 >
                                     <Image
-                                        src={tab.image.src}
+                                        src="/img/placeholders/tile.png"
                                         width={tab.image.width}
                                         height={tab.image.height}
                                         alt={tab.title}

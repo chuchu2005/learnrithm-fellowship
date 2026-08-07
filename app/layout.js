@@ -75,7 +75,7 @@ const orgSchema = {
     "https://twitter.com/learnrithmai",
     "https://instagram.com/learnrithm"
   ],
-  "description": "Learnrithm AI is a smart AI tutor that helps students with homework, studying, and exam prep. Ask any question, get clear step-by-step answers, take practice quizzes, and learn in your own language.",
+  "description": "Learnrithm AI runs a free 12-week Software Engineering Fellowship that teaches people to build real AI apps, from beginner to job-ready.",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-800-LEARNRITHM",
@@ -91,50 +91,50 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How can Learnrithm AI help me with my homework and studying?",
+      "name": "What is the Learnrithm AI Fellowship?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Learnrithm AI acts as your personal tutor, breaking down complex topics step-by-step, providing instant answers, and generating custom quizzes to help you master any subject. You can upload your notes, ask questions, and get explanations in text, images, and even your local language."
+        "text": "It is a free 12-week program where you learn to build real AI apps. You join live classes on Zoom, build real projects, and learn directly from software engineers at Google, OpenAI, Grok, and other big tech companies."
       }
     },
     {
       "@type": "Question",
-      "name": "Is Learnrithm AI better than ChatGPT or other AI tools for students?",
+      "name": "Do I need to know how to code to join?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Learnrithm AI is designed specifically for students and learning. Unlike general AI chatbots, it adapts to your learning style, covers any subject, and provides interactive teaching, quizzes, and homework help—all in one platform."
+        "text": "No. Beginners are welcome. We start from the basics and teach you step by step, so you do not need any coding experience before you start."
       }
     },
     {
       "@type": "Question",
-      "name": "How can I use Learnrithm AI to improve my grades?",
+      "name": "How long is the fellowship and how does it work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use Learnrithm AI to get step-by-step lessons, practice with quizzes, and receive instant feedback. 94% of users improved their grades within one month, and you can learn 3x faster compared to traditional methods."
+        "text": "The program runs for 12 weeks. You join live classes on Zoom each week with about 25 to 30 other learners, build real projects, and get help whenever you get stuck."
       }
     },
     {
       "@type": "Question",
-      "name": "What subjects does Learnrithm AI cover?",
+      "name": "What will I build during the fellowship?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Learnrithm AI covers all subjects—from math and science to languages and humanities. You can ask about any topic, and the AI will teach you in a way that makes sense to you."
+        "text": "You will build chatbots, AI tools that read files and answer questions, and other apps people really use. By the end, your apps go live on the internet for real people to try."
       }
     },
     {
       "@type": "Question",
-      "name": "Can Learnrithm AI help me prepare for exams and standardized tests?",
+      "name": "Is the Learnrithm AI Fellowship really free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely! You can generate quizzes based on exam formats, practice with past questions, and get explanations for any question you're stuck on. The AI adapts to your needs to help you feel confident for any test."
+        "text": "Yes. The program is free to join, with no hidden fees."
       }
     },
     {
       "@type": "Question",
-      "name": "How much does Learnrithm AI cost and is there a free trial?",
+      "name": "Will the fellowship help me get a job?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Learnrithm AI offers an all-inclusive subscription starting at less than £2/week. There's a 14-day free trial—no credit card required—so you can try all features risk-free."
+        "text": "Yes. You finish with real projects you built and the skills to apply for tech jobs or start your own thing. Many fellows use their projects to show employers what they can do."
       }
     }
   ]
@@ -143,116 +143,68 @@ const faqSchema = {
 // SoftwareApplication Schema for the platform
 const softwareSchema = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Learnrithm AI",
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Web, iOS, Android",
-  "offers": {
-    "@type": "Offer",
-    "price": "2",
-    "priceCurrency": "GBP",
-    "availability": "https://schema.org/InStock"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "2500"
+  "@type": "Course",
+  "name": "Learnrithm AI Software Engineering Fellowship",
+  "description": "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. Beginners welcome.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Learnrithm AI",
+    "sameAs": "https://learnrithm.com"
   }
 };
 
 export const metadata = {
   metadataBase: new URL("https://learnrithm.com"),
   title: {
-    default: "Learnrithm | AI Homework Help, Study Tools & Test Prep",
-    template: '%s | Learnrithm'
+    default: "Learnrithm AI Fellowship | Learn to Build Real AI Apps in 12 Weeks",
+    template: '%s | Learnrithm AI Fellowship'
   },
-  description: "Get 24/7 AI homework help and step-by-step answers for every subject. Learnrithm's AI tutor helps students with homework, practice tests, flashcards, and SAT, ACT, and AP prep. Try it free.",
+  description: "The Learnrithm AI Fellowship is a free 12-week program. Learn to build real AI apps with live Zoom classes, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. Beginners welcome.",
   keywords: [
-    // What students actually type
-    "homework help",
-    "help with homework",
-    "homework answers",
-    "homework helper",
-    "homework app",
-    "math help",
-    "math solver",
-    "science help",
-    "essay help",
-    "study help",
-    "study app",
-    "study buddy",
-
-    // Tools they look for
-    "ai tutor",
-    "ai homework help",
-    "ai homework solver",
-    "ai study tool",
-    "ai study buddy",
-    "ai teacher",
-    "online tutor",
-    "flashcards",
-    "quiz maker",
-    "practice test",
-    "study planner",
-
-    // Exams & revision — searched by name
-    "exam revision",
-    "revision notes",
-    "past papers",
-    "study for a test",
-    "sat prep",
-    "act prep",
-    "gcse revision",
-    "a level revision",
-    "jamb prep",
-    "jamb past questions",
-    "waec past questions",
-    "neco past questions",
-    "ielts prep",
-    "toefl prep",
-
-    // How they learn
-    "learn faster",
-    "memorize faster",
-    "study tips",
-    "understand math",
-    "learn in my language",
-
-    // Subject help
-    "biology help",
-    "chemistry help",
-    "physics help",
-    "history help",
-
-    // High-intent — exact phrases students type (from SEO research)
-    "math problem solver",
-    "ai math solver",
-    "solve math by photo",
-    "answer scanner",
-    "snap homework",
-    "test prep",
-    "study aid",
-    "free homework help",
-    "homework answers free",
-    "step by step math solver",
-    "gpa calculator",
-    "grade calculator",
-    "summary generator",
-    "study notes",
-    "cbt practice",
-    "past question app",
+    // What people search for
+    "ai fellowship",
+    "software engineering fellowship",
+    "ai engineering fellowship",
+    "tech fellowship",
+    "coding fellowship",
+    "ai bootcamp",
+    "ai developer program",
+    "learn to build ai apps",
+    "build ai applications",
+    "ai app development",
+    "full stack ai development",
+    "learn ai engineering",
+    "become an ai engineer",
+    "ai engineer training",
+    "machine learning fellowship",
+    "generative ai course",
+    "rag",
+    "ai chatbot course",
+    "llm application course",
+    "ai projects for portfolio",
+    "job ready ai skills",
+    "learn to code ai",
+    "beginner ai coding",
+    "ai career program",
+    "free ai program",
+    "free coding program",
+    "12 week ai program",
+    "live ai coding classes",
+    "online ai engineering program",
+    "career switch to ai",
 
     // Brand
     "learnrithm",
-    "learnrithm ai"
+    "learnrithm ai",
+    "learnrithm fellowship"
   ],
   authors: [{ name: "Learnrithm AI" }],
   publisher: "Learnrithm AI",
   openGraph: {
-    title: "Learnrithm AI — AI Tutor & Study Helper for Students",
-    description: "An AI tutor that helps students with homework, studying, and exam prep. Get step-by-step answers, practice quizzes, and lessons in your own language. Try Learnrithm AI free.",
+    title: "Learnrithm AI Fellowship — Build Real AI Apps in 12 Weeks",
+    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. No coding experience needed.",
     url: "https://learnrithm.com",
-    siteName: "Learnrithm AI",
+    siteName: "Learnrithm AI Fellowship",
     images: [
       {
         url: "https://learnrithm.com/img/imgs.jpg",
@@ -268,8 +220,8 @@ export const metadata = {
     card: 'summary_large_image',
     site: "@learnrithmai",
     creator: "@learnrithmai",
-    title: "Learnrithm AI — AI Tutor & Study Helper for Students",
-    description: "An AI tutor that helps students with homework, studying, and exam prep. Get step-by-step answers, practice quizzes, and lessons in your own language. Try Learnrithm AI free.",
+    title: "Learnrithm AI Fellowship — Build Real AI Apps in 12 Weeks",
+    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. No coding experience needed.",
     images: ["https://learnrithm.com/img/imgs.jpg"]
   },
   icons: {

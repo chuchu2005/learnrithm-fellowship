@@ -1,39 +1,7 @@
 "use client";
 import Link from "next/link";
-import { usePricingByRegion } from "@/hooks/usePricingByRegion";
-import { getCurrencySymbol } from "@/utils/currencyConverter";
 
 export default function Pricing() {
-
-    const { pricing, isLoading } = usePricingByRegion();
-
-    // Get pricing based on region with currency symbol
-    const getMonthlyPrice = () => {
-        if (!pricing || !pricing.pricing?.tiers?.monthly) {
-            return '$9.99';
-        }
-        const price = pricing.pricing.tiers.monthly.monthly;
-        const symbol = getCurrencySymbol(pricing.region?.currency || 'USD');
-        return `${symbol}${price.toFixed(2)}`;
-    };
-
-    const getYearlyPlanYearlyPrice = () => {
-        if (!pricing || !pricing.pricing?.tiers?.yearly) {
-            return '$99.99';
-        }
-        const price = pricing.pricing.tiers.yearly.yearly; // Yearly total
-        const symbol = getCurrencySymbol(pricing.region?.currency || 'USD');
-        return `${symbol}${price.toFixed(2)}`;
-    };
-
-    const getYearlyPlanMonthlyPrice = () => {
-        if (!pricing || !pricing.pricing?.tiers?.yearly) {
-            return '$8.33';
-        }
-        const price = pricing.pricing.tiers.yearly.monthly; // Monthly equivalent of yearly plan
-        const symbol = getCurrencySymbol(pricing.region?.currency || 'USD');
-        return `${symbol}${price.toFixed(2)}`;
-    };
 
 
 
@@ -48,15 +16,19 @@ export default function Pricing() {
                                 <path d="M19.527 4.826c-2.04-.11-4.196-2.23-4.352-4.273.073-.03.151-.068.233-.091a11.5 11.5 0 0 1 3.74-.45q.099.001.195.01c.415.055.611.236.636.654.025.454.036.911.013 1.366a11.4 11.4 0 0 1-.465 2.783zM6.954 12.18c.653-.003.873.206.872.725a2.17 2.17 0 0 1-.636 1.55c-1.1 1.13-2.274 2.177-3.647 2.977a4 4 0 0 1-.24.13c-.336.167-.589.152-.793-.047-.207-.2-.25-.467-.062-.787.304-.514.598-1.043.971-1.505a45 45 0 0 1 2.002-2.29 2.32 2.32 0 0 1 1.533-.753m-4.047-1.954c-.605-.11-1.193.004-1.78.128-.152.032-.303.08-.457.1a.56.56 0 0 1-.59-.295c-.123-.213-.1-.423.039-.623a.6.6 0 0 1 .074-.091c.668-.659 1.317-1.337 2.009-1.969a4.2 4.2 0 0 1 2.113-1.03c.334-.06.671-.083 1.012.073-.804 1.232-1.604 2.455-2.42 3.707m6.939 6.861c-.017.013.022-.021.065-.049 1.184-.748 2.369-1.494 3.581-2.258.117.262.114.551.07.844a4.34 4.34 0 0 1-1.127 2.356c-.575.619-1.186 1.204-1.785 1.802a.9.9 0 0 1-.22.158.57.57 0 0 1-.818-.44c-.014-.115-.001-.233.01-.35.071-.67.144-1.34.223-2.064zM8.065 15.27l.912.946c-.32.174-.656.359-.994.54q-.29.154-.588.3c-.463.227-.621.194-1.006-.222zm-4.226-4.24.9.912c-.25.261-.518.536-.779.818-.263.284-.518.574-.778.86-.343-.319-.4-.509-.223-.87.279-.57.577-1.13.88-1.72m9.031-5.652a1.733 1.733 0 0 1 1.756 1.748c0 .973-.793 1.766-1.759 1.759a1.783 1.783 0 0 1-1.749-1.742c-.017-.959.78-1.761 1.752-1.765" />
                             </svg>
 
-                            Pricing
+                            Cost
                         </div>
 
                         {/* <!-- Spacer --> */}
                         <div className="mb-6"></div>
 
                         <h2 className="ss-text-reveal-blur mb-0">
-                            All-inclusive great options pick your Plan
+                            It Is Free to Join the Fellowship
                         </h2>
+
+                        <p className="fs-md text-dark text-opacity-75 mt-5 mb-0">
+                            The fellowship is fully funded by Learnrithm to help train the next generation of AI software engineers.
+                        </p>
                     </div>
 
                 </div>
@@ -71,29 +43,29 @@ export default function Pricing() {
                                 <div className="col-md-6">
                                     <div className="vstack justify-content-between gap-4 gap-md-10 p-5 h-full">
                                         <div className="text-center text-md-start">
-                                            <h5 className="mb-0">Monthly Plan</h5>
+                                            <h5 className="mb-0">What&apos;s Included</h5>
 
                                             {/* <!-- Spacer --> */}
                                             <div className="mb-2"></div>
 
-                                            <p className="fs-md mb-0">No charges until your free trial ends</p>
+                                            <p className="fs-md mb-0">Free for everyone who joins</p>
                                         </div>
 
                                         <div className="text-center text-md-start">
                                             <div className="d-flex align-items-end justify-content-center justify-content-md-start gap-1 mb-2">
                                                 <h3 className="mb-0 lh-1">
-                                                    {isLoading ? '...' : getMonthlyPrice()}
+                                                    $0
                                                 </h3>
                                                 <p className="fs-md mb-1">
-                                                    /month
+                                                    to join
                                                 </p>
                                             </div>
 
                                             {/* <!-- Spacer --> */}
                                             <div className="mb-6"></div>
 
-                                            <Link href="https://app.learnrithm.com/dashboard/pricing" className="btn btn-outline-dark border bg-primary-hover border-primary-hover has-icon" target="_blank">
-                                                Start Free Trial
+                                            <Link href="/apply" className="btn btn-outline-dark border bg-primary-hover border-primary-hover has-icon">
+                                                Apply Now
 
                                                 <div className="icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -117,7 +89,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Unlimited AI Teacher courses
+                                                Live classes on Zoom
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-dark">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-primary p-2 hstack justify-content-center">
@@ -126,7 +98,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Unlimited quiz generation
+                                                Build real AI apps
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-dark">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-primary p-2 hstack justify-content-center">
@@ -135,7 +107,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Unlimited chatbot modes
+                                                Taught by big-tech engineers
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-dark">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-primary p-2 hstack justify-content-center">
@@ -144,7 +116,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Learn in your language
+                                                Learn with 25 to 30 people
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-dark">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-primary p-2 hstack justify-content-center">
@@ -153,7 +125,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Ad-free experience
+                                                Beginners welcome
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-dark">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-primary p-2 hstack justify-content-center">
@@ -162,7 +134,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Priority support
+                                                Put your apps online
                                             </li>
                                         </ul>
                                     </div>
@@ -176,34 +148,34 @@ export default function Pricing() {
                                 <div className="col-md-6">
                                     <div className="vstack justify-content-between gap-4 gap-md-10 p-5 h-full">
                                         <div className="text-center text-md-start">
-                                            <h5 className="mb-0">Yearly Plan</h5>
+                                            <h5 className="mb-0">What You&apos;ll Walk Away With</h5>
 
                                             {/* <!-- Spacer --> */}
                                             <div className="mb-2"></div>
 
                                             <p className="fs-md mb-0">
-                                                No charges until your free trial ends
+                                                Skills and projects that can get you a job
                                             </p>
                                         </div>
 
                                         <div className="text-center text-md-start">
                                             <div className="d-flex align-items-end justify-content-center justify-content-md-start gap-1 mb-2">
                                                 <h3 className="mb-0 lh-1">
-                                                    {isLoading ? '...' : getYearlyPlanYearlyPrice()}
+                                                    $0
                                                 </h3>
                                                 <p className="fs-md mb-1">
-                                                    /year
+                                                    /program
                                                 </p>
                                             </div>
                                             <p className="text-muted small mb-0">
-                                                ({getYearlyPlanMonthlyPrice()}/month equivalent)
+                                                Free for all fellows
                                             </p>
 
                                             {/* <!-- Spacer --> */}
                                             <div className="mb-6"></div>
 
-                                            <Link href="https://app.learnrithm.com/dashboard/pricing" className="btn btn-primary has-icon" target="_blank">
-                                                Start Free Trial
+                                            <Link href="/apply" className="btn btn-primary has-icon">
+                                                Apply Now
 
                                                 <div className="icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -227,7 +199,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Everything in Monthly, plus:
+                                                You also get:
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-white">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-dark p-2 hstack justify-content-center">
@@ -236,7 +208,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Save 10% vs monthly billing
+                                                A certificate of completion
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-white">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-dark p-2 hstack justify-content-center">
@@ -245,7 +217,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Unlimited AI Teacher courses
+                                                Free credits: Claude Code, OpenAI, AWS, Cloudflare, Gemini
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-white">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-dark p-2 hstack justify-content-center">
@@ -254,7 +226,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Unlimited quiz generation
+                                                Lifetime alum status
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-white">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-dark p-2 hstack justify-content-center">
@@ -263,7 +235,7 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Unlimited chatbot modes
+                                                A portfolio of real apps
                                             </li>
                                             <li className="hstack align-items-start gap-3 text-white">
                                                 <div className="w-7 h-7 rounded-circle bg-white text-dark p-2 hstack justify-content-center">
@@ -272,7 +244,34 @@ export default function Pricing() {
                                                         </path>
                                                     </svg>
                                                 </div>
-                                                Ad-free & personalized
+                                                Live classes on Zoom
+                                            </li>
+                                            <li className="hstack align-items-start gap-3 text-white">
+                                                <div className="w-7 h-7 rounded-circle bg-white text-dark p-2 hstack justify-content-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" fill="currentColor" viewBox="0 0 11 11">
+                                                        <path d="M10.078.232a.5.5 0 0 1 .844.537l-5.5 8.641a1.5 1.5 0 0 1-2.548-.028L.072 4.759a.5.5 0 0 1 .856-.518l2.801 4.623a.5.5 0 0 0 .85.01l5.5-8.642Z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                Build real AI apps
+                                            </li>
+                                            <li className="hstack align-items-start gap-3 text-white">
+                                                <div className="w-7 h-7 rounded-circle bg-white text-dark p-2 hstack justify-content-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" fill="currentColor" viewBox="0 0 11 11">
+                                                        <path d="M10.078.232a.5.5 0 0 1 .844.537l-5.5 8.641a1.5 1.5 0 0 1-2.548-.028L.072 4.759a.5.5 0 0 1 .856-.518l2.801 4.623a.5.5 0 0 0 .85.01l5.5-8.642Z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                Taught by big-tech engineers
+                                            </li>
+                                            <li className="hstack align-items-start gap-3 text-white">
+                                                <div className="w-7 h-7 rounded-circle bg-white text-dark p-2 hstack justify-content-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" fill="currentColor" viewBox="0 0 11 11">
+                                                        <path d="M10.078.232a.5.5 0 0 1 .844.537l-5.5 8.641a1.5 1.5 0 0 1-2.548-.028L.072 4.759a.5.5 0 0 1 .856-.518l2.801 4.623a.5.5 0 0 0 .85.01l5.5-8.642Z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                Skills for a tech job
                                             </li>
                                         </ul>
                                     </div>

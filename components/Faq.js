@@ -15,28 +15,28 @@ const ChevronIcon = () => (
 const faqItems = [
     {
         eventKey: "0",
-        question: "What is Learnrithm AI?",
-        answer: "Learnrithm AI is your smart study buddy that helps you learn fast and remember more. It's like having a friend who knows everything and explains it in a way that makes sense - just for you!"
+        question: "What is the Learnrithm AI Fellowship?",
+        answer: "It is a free 12-week program where you learn to build real AI apps. You join live classes on Zoom, build real projects, and learn directly from software engineers at Google, OpenAI, Grok, and other big tech companies."
     },
     {
         eventKey: "1",
-        question: "How does Learnrithm help me study?",
-        answer: "Learnrithm figures out how you learn best and makes study plans just for you! It gives you practice tests, explains hard stuff, and tracks your progress so you can see yourself getting smarter every day."
+        question: "Do I need to know how to code?",
+        answer: "No. Beginners are very welcome. We start from the basics and help you learn step by step. If you already know some coding, that is great too."
     },
     {
         eventKey: "2",
-        question: "Is Learnrithm easy to use?",
-        answer: "Super easy! Just sign up, pick your subject, and start learning. Everything is simple and clear - no confusing buttons or hard stuff. Even a 10-year-old can use it without help!"
+        question: "How does the program work?",
+        answer: "You join live classes on Zoom each week with about 25 to 30 other learners. You build real projects, and real engineers help you whenever you get stuck."
     },
     {
         eventKey: "3",
-        question: "Can I use it for all my subjects?",
-        answer: "Yes! Math, science, history, english, and more - Learnrithm helps with all your school subjects. Just pick what you want to study and start learning right away!"
+        question: "What will I build?",
+        answer: "You will build chatbots, AI tools that read files and answer questions, and other apps people really use. By the end, your apps go live on the internet."
     },
     {
         eventKey: "4",
-        question: "How much does it cost?",
-        answer: "You can start for free and see if you like it! We have plans for every budget - from a few dollars a month to bigger plans if you want extra help. Getting good grades is worth it!"
+        question: "Is it really free?",
+        answer: "Yes, the program is free to join. There are no hidden fees."
     },
 ];
 
@@ -69,24 +69,24 @@ export default function Faq() {
 
                                 <h2 className="ss-text-reveal-blur mb-0">
                                     Got questions? We&apos;ve got answers!<br/>
-                                    Let&apos;s get you that A!
+                                    We&apos;re here to help you join.
                                 </h2>
 
                                 {/* <!-- Spacer --> */}
                                 <div className="mb-6"></div>
 
                                 <p className="fs-lg fw-medium text-dark mb-0">
-                                    Need more help? We&apos;re here for you!
+                                    Still not sure if it is right for you? We are happy to help.
                                 </p>
 
                                 {/* <!-- Spacer --> */}
                                 <div className="mb-2"></div>
 
                                 <p className="fs-md fw-medium mb-0">
-                                    <Link href="/contact" className="animated-link text-decoration-none">
-                                        Send us a message!
+                                    <Link href="/apply" className="animated-link text-decoration-none">
+                                        Apply Now
                                     </Link>
-                                    {" "}We can&apos;t wait to help you succeed!
+                                    {" "}We would love to help you join.
                                 </p>
 
                                 {/* <!-- Spacer --> */}
