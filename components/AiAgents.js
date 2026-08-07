@@ -40,7 +40,7 @@ export default function AiAgents() {
                     <div className="col-md-6 col-lg-3">
                         <div className="position-relative overflow-hidden image-hover-scale tilt-card ai-agent-card" data-tilt="" data-tilt-speed="0.3" data-tilt-max="5">
                             <div className="img-clip-anim-box shadow-hover-effect ratio ratio-1x1 rounded-5 overflow-hidden">
-                                <Image src="/img/placeholders/tile.png" alt="..." width={366} height={366} className="img-clip-anim w-full h-full object-fit-cover" />
+                                <Image src="/img/content/pexels/lang-python.jpg" alt="Python programming" width={366} height={366} className="img-clip-anim w-full h-full object-fit-cover" />
                             </div>
 
                             <div className="position-absolute bottom-0 start-0 w-full p-4">
@@ -54,7 +54,7 @@ export default function AiAgents() {
                     <div className="col-md-6 col-lg-3">
                         <div className="position-relative overflow-hidden image-hover-scale tilt-card ai-agent-card" data-tilt="" data-tilt-speed="0.3" data-tilt-max="5">
                             <div className="img-clip-anim-box shadow-hover-effect ratio ratio-1x1 rounded-5 overflow-hidden">
-                                <Image src="/img/placeholders/tile.png" alt="..." width={366} height={366} className="img-clip-anim w-full h-full object-fit-cover" />
+                                <Image src="/img/content/pexels/lang-javascript.jpg" alt="JavaScript web development" width={366} height={366} className="img-clip-anim w-full h-full object-fit-cover" />
                             </div>
 
                             <div className="position-absolute bottom-0 start-0 w-full p-4">
@@ -68,7 +68,7 @@ export default function AiAgents() {
                     <div className="col-md-6 col-lg-3">
                         <div className="position-relative overflow-hidden image-hover-scale tilt-card ai-agent-card" data-tilt="" data-tilt-speed="0.3" data-tilt-max="5">
                             <div className="img-clip-anim-box shadow-hover-effect ratio ratio-1x1 rounded-5 overflow-hidden">
-                                <Image src="/img/placeholders/tile.png" alt="..." width={366} height={366} className="img-clip-anim w-full h-full object-fit-cover" />
+                                <Image src="/img/content/pexels/lang-typescript.jpg" alt="TypeScript programming" width={366} height={366} className="img-clip-anim w-full h-full object-fit-cover" />
                             </div>
 
                             <div className="position-absolute bottom-0 start-0 w-full p-4">
@@ -82,7 +82,7 @@ export default function AiAgents() {
                     <div className="col-md-6 col-lg-3">
                         <div className="position-relative overflow-hidden image-hover-scale tilt-card ai-agent-card" data-tilt="" data-tilt-speed="0.3" data-tilt-max="5">
                             <div className="img-clip-anim-box shadow-hover-effect ratio ratio-1x1 rounded-5 overflow-hidden">
-                                <Image src="/img/placeholders/tile.png" alt="..." width={366} height={366} className="img-clip-anim w-full h-full object-fit-cover" />
+                                <Image src="/img/content/pexels/lang-sql.jpg" alt="SQL databases" width={366} height={366} className="img-clip-anim w-full h-full object-fit-cover" />
                             </div>
 
                             <div className="position-absolute bottom-0 start-0 w-full p-4">

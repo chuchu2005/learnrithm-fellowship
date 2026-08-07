@@ -49,10 +49,10 @@ export default function Feature() {
                             </div>
 
                             <div className="ratio ratio-1x1 bg-white border rounded-5 overflow-hidden">
-                                <Image src="/img/placeholders/tile.png" width={410} height={410} alt="..." className="img-fluid object-fit-contain" />
+                                <Image src="/img/content/pexels/feature-app-chatbot.jpg" width={410} height={410} alt="AI chatbot application" className="img-fluid object-fit-cover" />
                             </div>
                             <div className="ratio ratio-1x1 bg-white border rounded-5 overflow-hidden">
-                                <Image src="/img/placeholders/tile.png" alt="..." width={410} height={410} className="img-fluid object-fit-contain" />
+                                <Image src="/img/content/pexels/feature-app-data.jpg" alt="AI data analysis application" width={410} height={410} className="img-fluid object-fit-cover" />
                             </div>
                         </div>
                     </div>
@@ -91,10 +91,10 @@ export default function Feature() {
                             </div>
 
                             <div className="ratio ratio-1x1 bg-white border rounded-5 overflow-hidden">
-                                <Image src="/img/placeholders/tile.png" width={410} height={410} alt="..." className="img-fluid object-fit-contain" />
+                                <Image src="/img/content/pexels/feature-app-mobile.jpg" width={410} height={410} alt="AI mobile application" className="img-fluid object-fit-cover" />
                             </div>
                             <div className="ratio ratio-1x1 bg-white border rounded-5 overflow-hidden">
-                                <Image src="/img/placeholders/tile.png" width={410} height={410} alt="..." className="img-fluid object-fit-contain" />
+                                <Image src="/img/content/pexels/feature-app-viz.jpg" width={410} height={410} alt="AI dashboard application" className="img-fluid object-fit-cover" />
                             </div>
                         </div>
                     </div>

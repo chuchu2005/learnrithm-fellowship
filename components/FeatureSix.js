@@ -21,28 +21,28 @@ const tabs = [
     {
         id: "0",
         label: "Learn the Basics",
-        image: "/img/content/features/1.webp",
+        image: "/img/content/pexels/featuresix-learn-basics.jpg",
         features: ["Start From Zero", "Learn Step by Step"],
         description: "We start with the simple stuff. If you have never coded before, that is fine - we go slow and help you along.",
     },
     {
         id: "1",
         label: "Build Your First AI App",
-        image: "/img/content/features/2.webp",
+        image: "/img/content/pexels/featuresix-first-ai-app.jpg",
         features: ["Build a Chatbot", "Make It Smart"],
         description: "You build your first AI chatbot. It can talk to people and answer questions on a topic you pick.",
     },
     {
         id: "2",
         label: "Build Real Projects",
-        image: "/img/content/features/3.webp",
+        image: "/img/content/pexels/featuresix-real-projects.jpg",
         features: ["Build AI Tools", "Read Files and Answer"],
         description: "You build AI tools that read files and answer questions - the kind of apps people use at work.",
     },
     {
         id: "3",
         label: "Ship and Get Job-Ready",
-        image: "/img/content/features/4.webp",
+        image: "/img/content/pexels/featuresix-ship-job.jpg",
         features: ["Put It Online", "Show Employers"],
         description: "You put your apps on the internet for real people to use, and leave with projects that can get you a tech job.",
     },
@@ -179,7 +179,7 @@ export default function FeatureSix() {
                                             <div className="col-md-4">
                                                 <div className="p-3">
                                                     <Image
-                                                        src="/img/placeholders/tile.png"
+                                                        src={tab.image}
                                                         alt={tab.label}
                                                         width={496}
                                                         height={435}

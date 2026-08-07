@@ -106,7 +106,7 @@ export default function FeatureFour() {
                                     </div>
                                     <div className="col-md-6" data-ss-reveal="" data-x="-50">
                                         <div className="img-clip-anim-box ratio ratio-1x1 rounded-5 overflow-hidden h-full">
-                                            <Image src="/img/placeholders/tile.png" width={445} height={445}  alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
+                                            <Image src="/img/content/pexels/featurefour-live-classes.jpg" width={445} height={445}  alt="Live Zoom classes with real engineers" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
                                         </div>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@ export default function FeatureFour() {
                                     </div>
                                     <div className="col-md-6" data-ss-reveal="" data-x="-50">
                                         <div className="img-clip-anim-box ratio ratio-1x1 rounded-5 overflow-hidden h-full">
-                                            <Image src="/img/placeholders/tile.png" width={445} height={445} alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
+                                            <Image src="/img/content/pexels/featurefour-build-projects.jpg" width={445} height={445} alt="Building real AI projects hands-on" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
                                         </div>
                                     </div>
                                 </div>
@@ -252,7 +252,7 @@ export default function FeatureFour() {
                                     </div>
                                     <div className="col-md-6" data-ss-reveal="" data-x="-50">
                                         <div className="img-clip-anim-box ratio ratio-1x1 rounded-5 overflow-hidden h-full">
-                                            <Image src="/img/placeholders/tile.png" width={445} height={445}  alt="Feature Image" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
+                                            <Image src="/img/content/pexels/featurefour-engineers.jpg" width={445} height={445}  alt="Learn from engineers at Google, OpenAI and xAI" className="img-clip-anim img-fluid shadow-sm w-full h-full object-fit-cover" />
                                         </div>
                                     </div>
                                 </div>

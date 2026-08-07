@@ -26,35 +26,35 @@ const NextIcon = () => (
 const reviews = [
     {
         id: 1,
-        image: "/img/content/reviews/review-author-1.webp",
+        image: "/img/content/pexels/review-sarah.jpg",
         name: "Sarah Mitchell",
         role: "Fellow, 2026",
         text: "I had never coded before. By week 6 I built my first AI chatbot and put it online. I still cannot believe I made something real people use."
     },
     {
         id: 2,
-        image: "/img/content/reviews/review-author-2.webp",
+        image: "/img/content/pexels/review-james.jpg",
         name: "James Chen",
         role: "Career Switcher",
         text: "The live classes made it click for me. When I got stuck, a real engineer helped me right away. I finished with three real projects for my portfolio."
     },
     {
         id: 3,
-        image: "/img/content/reviews/review-author-3.webp",
+        image: "/img/content/pexels/review-emily.jpg",
         name: "Emily Rodriguez",
         role: "Fellow, 2026",
         text: "I loved building AI tools that read my notes and answer questions. The engineers showed me how to make my apps better, step by step."
     },
     {
         id: 4,
-        image: "/img/content/reviews/review-author-4.webp",
+        image: "/img/content/pexels/review-michael.jpg",
         name: "Michael Thompson",
         role: "Fellow, 2026",
         text: "Learning with 30 other people kept me going. We built real apps together, just like a real team at work."
     },
     {
         id: 5,
-        image: "/img/content/reviews/review-author-5.webp",
+        image: "/img/content/pexels/review-priya.jpg",
         name: "Priya Patel",
         role: "Fellow, 2026",
         text: "I came in knowing nothing. Twelve weeks later I had real apps online and the skills to apply for tech jobs. Best choice I ever made."
@@ -125,7 +125,7 @@ export default function Reviews() {
                                     <div className="img-clip-anim-box ratio ratio-1x1 rounded-5 overflow-hidden">
                                         <Image
                                             src={review.image}
-                                            alt={`Reviewer ${review.id}`}
+                                            alt={review.name}
                                             width={330}
                                             height={330}
                                             className="img-clip-anim w-100 h-100 object-fit-cover"

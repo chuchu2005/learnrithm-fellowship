@@ -40,7 +40,7 @@ export default function DecisionIntelligence() {
                 <div className="row align-items-center g-8 g-xl-10 position-relative">
                     <div className="gradient-line"></div>
                     <div className="col-lg-6 text-center order-lg-2" data-ss-reveal data-y="50">
-                        <Image src="/img/placeholders/tile.png" width={620} height={650} alt="App Preview" className="img-fluid" />
+                        <Image src="/img/content/pexels/di-skills-coding.jpg" width={620} height={650} alt="Building AI applications" className="img-fluid" />
                     </div>
 
                     <div className="col-lg-3 order-lg-1">

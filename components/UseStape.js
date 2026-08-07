@@ -9,7 +9,7 @@ const tabs = [
         id: "ai-avatar-1",
         title: "Apply in Minutes",
         description: "Fill out a short free form with your name and email. It takes less than five minutes.",
-        image: { src: "/img/content/features/feature-step-1.webp", width: 625, height: 404 },
+        image: { src: "/img/content/pexels/usestape-apply.jpg", width: 625, height: 404 },
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 22 22">
                 <path d="M0 16.25v-2.5a.75.75 0 0 1 1.5 0v2.5A3.744 3.744 0 0 0 5.25 20h2.5a.75.75 0 0 1 0 1.5h-2.5A5.244 5.244 0 0 1 0 16.25Zm20 0v-1.5a.75.75 0 0 1 1.5 0v1.5a5.244 5.244 0 0 1-5.25 5.25h-1.5a.75.75 0 0 1 0-1.5h1.5A3.744 3.744 0 0 0 20 16.25Zm-4-3.5V11.5h-4.5V16h1.25a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5H10v-4.5H5.5v1.25a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 1.5 0V10H10V5.5H8.75a.75.75 0 0 1 0-1.5h4a.75.75 0 0 1 0 1.5H11.5V10H16V8.75a.75.75 0 0 1 1.5 0v4a.75.75 0 0 1-1.5 0Zm-16-5v-2.5A5.244 5.244 0 0 1 5.25 0h2.5a.75.75 0 0 1 0 1.5h-2.5A3.744 3.744 0 0 0 1.5 5.25v2.5a.75.75 0 0 1-1.5 0Zm20 0v-2.5a3.744 3.744 0 0 0-3.75-3.75h-2.5a.75.75 0 0 1 0-1.5h2.5a5.244 5.244 0 0 1 5.25 5.25v2.5a.75.75 0 0 1-1.5 0Z" />
@@ -20,7 +20,7 @@ const tabs = [
         id: "ai-avatar-2",
         title: "Join Your Cohort",
         description: "Get placed in a group of 25 to 30 learners. Classes are live on Zoom at set times each week.",
-        image: { src: "/img/content/features/feature-step-2.webp", width: 625, height: 404 },
+        image: { src: "/img/content/pexels/usestape-cohort.jpg", width: 625, height: 404 },
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 22 22">
                 <path d="M20 13.749v-6c0-2.426-.49-3.928-1.405-4.844C17.679 1.99 16.176 1.5 13.75 1.5h-6c-2.426 0-3.93.49-4.845 1.405C1.99 3.821 1.5 5.323 1.5 7.75v.98a.75.75 0 0 1-1.5 0v-.98c0-2.573.51-4.57 1.845-5.904C3.179.51 5.176 0 7.75 0h6c2.574 0 4.57.51 5.905 1.845C20.99 3.179 21.5 5.175 21.5 7.749v6c0 2.574-.51 4.57-1.845 5.905-1.334 1.334-3.331 1.844-5.905 1.844h-1a.75.75 0 1 1 0-1.5h1c2.426 0 3.93-.49 4.845-1.405.915-.916 1.405-2.418 1.405-4.844Z" />
@@ -33,7 +33,7 @@ const tabs = [
         id: "ai-avatar-3",
         title: "Build and Ship Real Apps",
         description: "Build real AI apps each week, get help from real engineers, and put your work online for real people to use.",
-        image: { src: "/img/content/features/feature-step-3.webp", width: 625, height: 404 },
+        image: { src: "/img/content/pexels/usestape-build.jpg", width: 625, height: 404 },
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 22 22">
                 <path d="M20 6.732c0-1.877-.47-3.149-1.28-3.956-.809-.807-2.085-1.276-3.97-1.276h-8c-1.885 0-3.161.47-3.97 1.276-.81.807-1.28 2.079-1.28 3.956v4.985c0 2.427.494 3.642 1.243 4.296.775.676 2.02.936 4.007.936h.5c.285 0 .56.087.78.196.214.108.45.273.62.503l1.5 1.994c.208.277.433.358.6.358.167 0 .392-.081.6-.358l1.5-1.994.004-.004c.33-.433.849-.695 1.396-.695h.5c1.885 0 3.161-.469 3.97-1.276.81-.807 1.28-2.078 1.28-3.956V6.732Zm1.5 4.985c0 2.11-.53 3.83-1.72 5.017-1.191 1.187-2.915 1.715-5.03 1.715h-.5a.265.265 0 0 0-.203.104l-1.497 1.99c-.451.6-1.097.957-1.8.957-.703 0-1.349-.357-1.8-.957l-1.5-1.994-.006-.009c.009.012.008.007-.01-.008a.436.436 0 0 0-.158-.077c-.025-.007-.034-.006-.026-.006h-.5c-2.013 0-3.768-.238-4.993-1.306C.507 16.052 0 14.274 0 11.717V6.732c0-2.11.53-3.83 1.72-5.017C2.912.528 4.636 0 6.75 0h8c2.115 0 3.839.528 5.03 1.715 1.19 1.187 1.72 2.907 1.72 5.017v4.985Z" />
@@ -85,7 +85,7 @@ export default function UseStape() {
                                     role="tabpanel"
                                 >
                                     <Image
-                                        src="/img/placeholders/tile.png"
+                                        src={tab.image.src}
                                         width={tab.image.width}
                                         height={tab.image.height}
                                         alt={tab.title}
