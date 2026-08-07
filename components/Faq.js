@@ -16,7 +16,7 @@ const faqItems = [
     {
         eventKey: "0",
         question: "What is the Learnrithm AI Fellowship?",
-        answer: "It is a free 12-week program where you learn to build real AI apps. You join live classes on Zoom, build real projects, and learn directly from software engineers at Google, OpenAI, Grok, and other big tech companies."
+        answer: "It is a free 12-week program where you learn to build real AI apps. You join live classes on Zoom, build real projects, and learn directly from software engineers at Google, OpenAI, xAI, and other big tech companies."
     },
     {
         eventKey: "1",

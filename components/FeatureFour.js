@@ -33,7 +33,7 @@ export default function FeatureFour() {
 
                             <p className="fs-md mb-0">
                                 In 12 weeks you go from learning the basics to building real AI apps.
-                                You learn directly from software engineers at Google, OpenAI, Grok, and other big tech companies.
+                                You learn directly from software engineers at Google, OpenAI, xAI, and other big tech companies.
                             </p>
                         </div>
                     </div>
@@ -197,7 +197,7 @@ export default function FeatureFour() {
                                                 <div className="mb-4 mb-lg-5"></div>
 
                                                 <p className="fs-md mb-0">
-                                                    Learn directly from software engineers at Google, OpenAI, Grok, and other big tech.
+                                                    Learn directly from software engineers at Google, OpenAI, xAI, and other big tech.
                                                     They also teach you to use sub-agents so you build apps way faster.
                                                 </p>
 
@@ -230,7 +230,7 @@ export default function FeatureFour() {
                                                             <path d="M7.5 13.1V4.765c0-.926.232-1.73.8-2.299.57-.568 1.374-.8 2.3-.8h3.333a.6.6 0 1 1 0 1.199H10.6c-.741 0-1.187.185-1.452.45-.264.264-.449.71-.449 1.45V13.1c0 .741.185 1.187.45 1.451.264.265.71.45 1.45.45h3.334a.6.6 0 0 1 0 1.2H10.6c-.926 0-1.73-.232-2.3-.8-.568-.57-.8-1.375-.8-2.3" />
                                                         </svg>
 
-                                                        Grok Engineers
+                                                        xAI Engineers
                                                     </div>
                                                 </div>
                                             </div>

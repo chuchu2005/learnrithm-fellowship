@@ -16,10 +16,10 @@ import Outcomes from '@/components/Outcomes'
 
 export const metadata = {
   title: "Learnrithm AI Fellowship | Learn to Build Real AI Apps in 12 Weeks",
-  description: "The Learnrithm AI Fellowship is a free 12-week program. Learn to build real AI apps with live Zoom classes, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. Beginners welcome.",
+  description: "The Learnrithm AI Fellowship is a free 12-week program. Learn to build real AI apps with live Zoom classes, real projects, taught by engineers from Google, OpenAI, xAI, and big tech. Beginners welcome.",
   openGraph: {
     title: "Learnrithm AI Fellowship — Build Real AI Apps in 12 Weeks",
-    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. No coding experience needed.",
+    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, xAI, and big tech. No coding experience needed.",
     url: "https://learnrithm.com",
     siteName: "Learnrithm AI Fellowship",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
     site: "@learnrithmai",
     creator: "@learnrithmai",
     title: "Learnrithm AI Fellowship — Build Real AI Apps in 12 Weeks",
-    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. No coding experience needed.",
+    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, xAI, and big tech. No coding experience needed.",
     images: ["https://learnrithm.com/img/imgs.jpg"]
   },
   canonical: "https://learnrithm.com"

@@ -94,7 +94,7 @@ const faqSchema = {
       "name": "What is the Learnrithm AI Fellowship?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is a free 12-week program where you learn to build real AI apps. You join live classes on Zoom, build real projects, and learn directly from software engineers at Google, OpenAI, Grok, and other big tech companies."
+        "text": "It is a free 12-week program where you learn to build real AI apps. You join live classes on Zoom, build real projects, and learn directly from software engineers at Google, OpenAI, xAI, and other big tech companies."
       }
     },
     {
@@ -145,7 +145,7 @@ const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
   "name": "Learnrithm AI Software Engineering Fellowship",
-  "description": "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. Beginners welcome.",
+  "description": "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, xAI, and big tech. Beginners welcome.",
   "provider": {
     "@type": "Organization",
     "name": "Learnrithm AI",
@@ -159,7 +159,7 @@ export const metadata = {
     default: "Learnrithm AI Fellowship | Learn to Build Real AI Apps in 12 Weeks",
     template: '%s | Learnrithm AI Fellowship'
   },
-  description: "The Learnrithm AI Fellowship is a free 12-week program. Learn to build real AI apps with live Zoom classes, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. Beginners welcome.",
+  description: "The Learnrithm AI Fellowship is a free 12-week program. Learn to build real AI apps with live Zoom classes, real projects, taught by engineers from Google, OpenAI, xAI, and big tech. Beginners welcome.",
   keywords: [
     // What people search for
     "ai fellowship",
@@ -202,7 +202,7 @@ export const metadata = {
   publisher: "Learnrithm AI",
   openGraph: {
     title: "Learnrithm AI Fellowship — Build Real AI Apps in 12 Weeks",
-    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. No coding experience needed.",
+    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, xAI, and big tech. No coding experience needed.",
     url: "https://learnrithm.com",
     siteName: "Learnrithm AI Fellowship",
     images: [
@@ -221,7 +221,7 @@ export const metadata = {
     site: "@learnrithmai",
     creator: "@learnrithmai",
     title: "Learnrithm AI Fellowship — Build Real AI Apps in 12 Weeks",
-    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, Grok, and big tech. No coding experience needed.",
+    description: "A free 12-week program that teaches you to build real AI apps. Live classes on Zoom, real projects, taught by engineers from Google, OpenAI, xAI, and big tech. No coding experience needed.",
     images: ["https://learnrithm.com/img/imgs.jpg"]
   },
   icons: {
