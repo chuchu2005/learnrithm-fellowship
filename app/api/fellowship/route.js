@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { uploadPhoto, PhotoValidationError } from "@/lib/r2";
 
 // Fields the form marks required. The form uses <form ...> (noValidate removed),
 // so the browser validates these first; the server remains authoritative.
@@ -30,31 +31,32 @@ function str(value) {
 
 export async function POST(request) {
   // Cap request size on this public, unauthenticated write endpoint.
+  // 6 MB headroom over the 5 MB photo limit; multipart parts are not base64.
   const contentLength = Number(request.headers.get("content-length") || 0);
-  if (contentLength > 200_000) {
+  if (contentLength > 6_000_000) {
     return NextResponse.json({ error: "Payload too large." }, { status: 413 });
   }
 
-  let body;
+  let fd;
   try {
-    body = await request.json();
+    fd = await request.formData();
   } catch {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  if (!body || typeof body !== "object") {
-    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
-  }
-
   // Checkbox groups come as arrays from the client (FormData.getAll).
-  const languages = Array.isArray(body.languages)
-    ? body.languages.map((v) => String(v).trim()).filter(Boolean)
-    : [];
-  const aiInterests = Array.isArray(body.aiInterests)
-    ? body.aiInterests.map((v) => String(v).trim()).filter(Boolean)
-    : [];
+  const languages = fd
+    .getAll("languages")
+    .map((v) => String(v).trim())
+    .filter(Boolean);
+  const aiInterests = fd
+    .getAll("aiInterests")
+    .map((v) => String(v).trim())
+    .filter(Boolean);
 
-  const missing = REQUIRED.filter((key) => !str(body[key]));
+  // Validate ALL required text/email fields BEFORE touching R2, so a doomed
+  // request never produces an orphaned photo upload.
+  const missing = REQUIRED.filter((name) => !str(fd.get(name)));
   if (missing.length) {
     return NextResponse.json(
       { error: "Missing required fields: " + missing.join(", ") + "." },
@@ -62,47 +64,66 @@ export async function POST(request) {
     );
   }
 
-  if (typeof body.email !== "string" || !EMAIL_RE.test(body.email.trim())) {
+  const email = str(fd.get("email"));
+  if (!email || !EMAIL_RE.test(email)) {
     return NextResponse.json(
       { error: "Please provide a valid email address." },
       { status: 400 }
     );
   }
 
+  const photo = fd.get("photo");
+
   try {
+    // uploadPhoto validates the file (bad/missing/oversized/wrong-type/corrupt)
+    // and throws PhotoValidationError BEFORE uploading — safe to call here.
+    // The applicant details are attached to the R2 object as custom metadata
+    // and the object is named after the applicant (see lib/r2.js).
+    const { key } = await uploadPhoto(photo, {
+      fullName: str(fd.get("fullName")),
+      email,
+      phone: str(fd.get("phone")),
+      country: str(fd.get("country")),
+      university: str(fd.get("university")),
+    });
+
     const fellowship = await prisma.fellowship.create({
       data: {
-        fullName: str(body.fullName),
-        email: str(body.email),
-        phone: str(body.phone),
-        linkedin: str(body.linkedin),
-        continent: str(body.continent),
-        country: str(body.country),
-        situation: str(body.situation),
-        gradMonth: str(body.gradMonth),
-        gradYear: str(body.gradYear),
-        university: str(body.university),
-        major: str(body.major),
+        fullName: str(fd.get("fullName")),
+        email,
+        phone: str(fd.get("phone")),
+        linkedin: str(fd.get("linkedin")),
+        continent: str(fd.get("continent")),
+        country: str(fd.get("country")),
+        situation: str(fd.get("situation")),
+        gradMonth: str(fd.get("gradMonth")),
+        gradYear: str(fd.get("gradYear")),
+        university: str(fd.get("university")),
+        major: str(fd.get("major")),
         languages,
-        projects: str(body.projects),
-        apis: str(body.apis),
-        aiml: str(body.aiml),
-        why: str(body.why),
+        projects: str(fd.get("projects")),
+        apis: str(fd.get("apis")),
+        aiml: str(fd.get("aiml")),
+        why: str(fd.get("why")),
         aiInterests,
-        career: str(body.career),
-        learn: str(body.learn),
-        fulltime: str(body.fulltime),
-        timezone: str(body.timezone),
-        conflicts: str(body.conflicts),
-        proud: str(body.proud),
-        stuck: str(body.stuck),
-        collab: str(body.collab),
-        anythingElse: str(body.anythingElse),
+        career: str(fd.get("career")),
+        learn: str(fd.get("learn")),
+        fulltime: str(fd.get("fulltime")),
+        timezone: str(fd.get("timezone")),
+        conflicts: str(fd.get("conflicts")),
+        proud: str(fd.get("proud")),
+        stuck: str(fd.get("stuck")),
+        collab: str(fd.get("collab")),
+        anythingElse: str(fd.get("anythingElse")),
+        photoKey: key,
       },
     });
     return NextResponse.json({ ok: true, id: fellowship.id }, { status: 201 });
-  } catch (error) {
-    console.error("[fellowship] create failed:", error);
+  } catch (err) {
+    if (err instanceof PhotoValidationError) {
+      return NextResponse.json({ error: err.message }, { status: 400 });
+    }
+    console.error("[fellowship] create failed:", err);
     return NextResponse.json(
       {
         error:

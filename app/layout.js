@@ -30,19 +30,19 @@ import { Analytics } from '@vercel/analytics/react';
 const tropiline = localFont({
   src: [
     {
-      path: "../public//fonts/Tropiline-Regular.woff2",
+      path: "../public/fonts/Tropiline-Regular.woff2",
       style: "normal",
     },
     {
-      path: "../public//fonts/Tropiline-Italic.woff2",
+      path: "../public/fonts/Tropiline-Italic.woff2",
       style: "italic",
     },
     {
-      path: "../public//fonts/Tropiline-SemiBold.woff2",
+      path: "../public/fonts/Tropiline-SemiBold.woff2",
       style: "normal",
     },
     {
-      path: "../public//fonts/Tropiline-SemiBoldItalic.woff2",
+      path: "../public/fonts/Tropiline-SemiBoldItalic.woff2",
       style: "italic",
     },
   ],
@@ -53,13 +53,13 @@ const tropiline = localFont({
 
 const syne = Syne({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-syne",
   display: "swap",
 });
 
 const urbanist = Urbanist({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-urbanist",
   display: "swap",
 });
 
@@ -243,7 +243,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${tropiline.variable} ${syne.className} ${urbanist.className}`}>
+    <html lang="en" className={`${tropiline.variable} ${syne.variable} ${urbanist.variable} ${syne.className} ${urbanist.className}`}>
 
       <head>
         {/* Structured Data - JSON-LD */}

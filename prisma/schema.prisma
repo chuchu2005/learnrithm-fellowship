@@ -25,6 +25,11 @@ model Fellowship {
   linkedin     String
   continent    String
   country      String
+  // Profile photo — full Cloudflare R2 object key (private bucket; bytes are NOT
+  // stored here). Required for NEW applications (enforced by the form + API), but
+  // optional in the schema because MongoDB is schemaless and legacy documents
+  // will not have this field.
+  photoKey     String?
 
   // Section 2 — Background
   situation    String

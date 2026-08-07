@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 
 const COUNTRY_GROUPS = [
@@ -137,7 +137,36 @@ export default function ApplyForm() {
   const [errorMsg, setErrorMsg] = useState("");
   const [continent, setContinent] = useState("");
   const [country, setCountry] = useState("");
+  const [photoPreview, setPhotoPreview] = useState("");
+  const [photoError, setPhotoError] = useState("");
+  // Track the object URL so we can revoke it before minting a new one.
+  const photoObjectUrl = useRef("");
   const group = COUNTRY_GROUPS.find((g) => g.continent === continent);
+
+  const ALLOWED_PHOTO_TYPES = ["image/jpeg", "image/png", "image/webp"];
+
+  // Live preview + client-side type check for the profile photo.
+  function handlePhotoChange(e) {
+    const file = e.target.files?.[0];
+    if (photoObjectUrl.current) {
+      URL.revokeObjectURL(photoObjectUrl.current);
+      photoObjectUrl.current = "";
+    }
+    if (!file) {
+      setPhotoPreview("");
+      setPhotoError("");
+      return;
+    }
+    if (!ALLOWED_PHOTO_TYPES.includes(file.type)) {
+      setPhotoPreview("");
+      setPhotoError("Photo must be a JPG, PNG, or WebP image.");
+      return;
+    }
+    setPhotoError("");
+    const url = URL.createObjectURL(file);
+    photoObjectUrl.current = url;
+    setPhotoPreview(url);
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -145,42 +174,38 @@ export default function ApplyForm() {
     setStatus("submitting");
     setErrorMsg("");
 
+    // Build the body straight from the form — multipart FormData carries the
+    // photo File plus every named field. Do NOT set Content-Type; the browser
+    // sets the multipart boundary automatically.
     const fd = new FormData(e.currentTarget);
-    const payload = {
-      fullName: fd.get("fullName"),
-      email: fd.get("email"),
-      phone: fd.get("phone"),
-      linkedin: fd.get("linkedin"),
-      continent: fd.get("continent"),
-      country: fd.get("country"),
-      situation: fd.get("situation"),
-      gradMonth: fd.get("gradMonth"),
-      gradYear: fd.get("gradYear"),
-      university: fd.get("university"),
-      major: fd.get("major"),
-      // Checkboxes: use getAll() — get() would only return the first checked value.
-      languages: fd.getAll("languages"),
-      projects: fd.get("projects"),
-      apis: fd.get("apis"),
-      aiml: fd.get("aiml"),
-      why: fd.get("why"),
-      aiInterests: fd.getAll("aiInterests"),
-      career: fd.get("career"),
-      learn: fd.get("learn"),
-      fulltime: fd.get("fulltime"),
-      timezone: fd.get("timezone"),
-      conflicts: fd.get("conflicts"),
-      proud: fd.get("proud"),
-      stuck: fd.get("stuck"),
-      collab: fd.get("collab"),
-      anythingElse: fd.get("else"), // form field "else" -> stored as anythingElse
-    };
+
+    // The open-ended textarea is named `else` in the HTML but the server
+    // expects `anythingElse` — rename it. Checkbox arrays (languages,
+    // aiInterests) and the photo (`photo`) are captured automatically.
+    const openEnded = fd.get("else");
+    fd.delete("else");
+    fd.append("anythingElse", openEnded ?? "");
+
+    // Client-side photo guards (server remains authoritative). A missing
+    // file is caught by the input's native `required`.
+    const photo = fd.get("photo");
+    if (photo instanceof File) {
+      if (photo.size > 5 * 1024 * 1024) {
+        setErrorMsg("Photo must be 5 MB or smaller.");
+        setStatus("error");
+        return;
+      }
+      if (!ALLOWED_PHOTO_TYPES.includes(photo.type)) {
+        setErrorMsg("Photo must be a JPG, PNG, or WebP image.");
+        setStatus("error");
+        return;
+      }
+    }
 
     try {
       const res = await fetch("/api/fellowship", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: fd,
       });
 
       if (res.status === 201) {
@@ -343,6 +368,29 @@ export default function ApplyForm() {
                       </Field>
                     </div>
                   </div>
+
+                  <Field label="Profile photo" htmlFor="photo" required hint="JPG, PNG, or WebP — up to 5 MB.">
+                    <input
+                      id="photo"
+                      name="photo"
+                      type="file"
+                      accept="image/jpeg,image/png,image/webp"
+                      className={inputClass}
+                      required
+                      onChange={handlePhotoChange}
+                    />
+                    {photoError && (
+                      <div className="form-text text-danger">{photoError}</div>
+                    )}
+                    {photoPreview && (
+                      <img
+                        src={photoPreview}
+                        alt="Profile photo preview"
+                        className="mt-3 d-block"
+                        style={{ maxWidth: 160, borderRadius: 12 }}
+                      />
+                    )}
+                  </Field>
                 </Section>
 
                 {/* 02 — Background */}
@@ -488,6 +536,8 @@ export default function ApplyForm() {
 
                 {/* Submit */}
                 <div className="bg-white rounded-5 shadow-sm p-4 p-md-5 text-center">
+                  {/* v1 double-submit guard: the `submitting` state + disabled
+                      button below prevents re-submission (no idempotency key yet). */}
                   <button
                     type="submit"
                     className="btn btn-primary btn-lg has-icon px-4 px-md-5"
