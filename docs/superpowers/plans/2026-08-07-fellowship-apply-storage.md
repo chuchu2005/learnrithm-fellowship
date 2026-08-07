@@ -529,7 +529,7 @@ Run: `npm run build`
 Expected: no errors.
 
 Run: `npm run lint`
-Expected: no errors related to `ApplyForm.js`.
+Expected: `npm run lint` runs `eslint` over the whole project, so pre-existing warnings in other files may appear — ignore those and check only for issues in `app/apply/ApplyForm.js`, which should be clean.
 
 - [ ] **Step 7: Commit**
 
