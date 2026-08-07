@@ -1,0 +1,61 @@
+// Prisma schema for the Learnrithm Fellowship application form.
+// One submitted application = one document in the `fellowship` collection.
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["mongodb"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Fellowship {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  status       String   @default("submitted")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Section 1 — Basic Info
+  fullName     String
+  email        String
+  phone        String
+  linkedin     String
+  continent    String
+  country      String
+
+  // Section 2 — Background
+  situation    String
+  gradMonth    String?
+  gradYear     String?
+  university   String
+  major        String
+
+  // Section 3 — Technical Skills
+  languages    String[]
+  projects     String?
+  apis         String?
+  aiml         String?
+
+  // Section 4 — Motivation & Goals
+  why          String
+  aiInterests  String[]
+  career       String?
+  learn        String?
+
+  // Section 5 — Commitment
+  fulltime     String
+  timezone     String
+  conflicts    String?
+
+  // Section 6 — Vetting
+  proud        String?
+  stuck        String?
+  collab       String?
+
+  // Section 7 — Open-Ended (HTML field name "else" is a JS reserved word)
+  anythingElse String?
+
+  @@map("fellowship")
+}
