@@ -7,7 +7,7 @@ const form = new FormData();
 
 // Required fields
 form.append('fullName', 'Test Applicant');
-form.append('email', 'test@example.com');
+form.append('email', 'peter@Learnrithm.com');
 form.append('phone', '+1234567890');
 form.append('linkedin', 'https://linkedin.com/in/testapplicant');
 form.append('continent', 'Africa');
