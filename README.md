@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Learnrithm Fellowship — marketing site
 
-## Getting Started
+Marketing site for the Learnrithm Fellowship program. Next.js App Router (JavaScript).
+The build needs no environment variables — the Prisma and R2 clients resolve env lazily.
+No deploy-platform configuration is committed: an OpenNext/Cloudflare Workers setup was
+attempted and rolled back in commit `db4e330`.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Routes (actual build surface)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The production build emits exactly four routes:
 
-## Learn More
+| Route | Source |
+|---|---|
+| `/` | `app/page.js` |
+| `/apply` | `app/apply/page.js` |
+| `POST /api/fellowship` | `app/api/fellowship/route.js` — public application submission endpoint (validated payload, Postgres via Prisma, photos in R2) |
+| `/sitemap.xml` | `app/sitemap.js` |
 
-To learn more about Next.js, take a look at the following resources:
+This is the site's entire API surface: one public write endpoint (`POST /api/fellowship`).
+There is no auth server and no MCP server.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Known-stale SEO metadata
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`app/sitemap.js` advertises **45 URLs** — 13 static pages, 19 `/study/*` pages and
+13 `/compare/*` pages — but the build produces only the four routes above, and the
+conversion page `/apply` is missing from the sitemap entirely. `next.config.mjs` also
+emits `Link` headers advertising `text/markdown` alternates for five routes, four of
+which are not built, and nothing serves the markdown alternate (the `proxy.js`
+middleware layer was removed in commit `5dd378f` when the OpenNext deploy failed on
+Node.js middleware).
 
-## Deploy on Vercel
+Regenerate the sitemap and `Link` headers from the real route manifest before relying
+on this site's discovery metadata. `AGENT-README.md` has been corrected to match.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `LICENSE` (proprietary) and `NOTICE.md` (vendored Ruboz template stylesheet and
+GSAP libraries retain their upstream terms).
